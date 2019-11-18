@@ -35,7 +35,7 @@ if __name__ == '__main__':
     # creating spark context with source project files and external pip modules
     print('creating spark context. libs:', args.pip_modules, args.src)
     sc = SparkContext(appName="Some App Name", pyFiles=[args.pip_modules, args.src])
-    sc.setLogLevel('WARN')
+    # sc.setLogLevel('WARN')
     sql_context = SQLContext(sc)
     print('sql context created')
 
